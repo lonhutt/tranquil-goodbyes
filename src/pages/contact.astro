@@ -1,0 +1,26 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../site";
+---
+
+<Base title="Contact" description="Call or email Tranquil Goodbyes to request an in-home visit.">
+  <div class="page-head">
+    <div class="eyebrow">Contact</div>
+    <h1>When you're ready, we're here.</h1>
+    <p>Call or email whenever you need us. Tell us a little about your pet and where you live, and we'll take it from there.</p>
+  </div>
+  <section class="split" style="align-items:start">
+    <div class="card contact-card">
+      <h3>Call</h3>
+      <a class="big" href={site.phoneHref}>{site.phone}</a>
+      <h3 style="margin-top:12px">Email</h3>
+      <a class="big" style="font-size:24px" href={`mailto:${site.email}`}>{site.email}</a>
+      <a class="btn" style="margin-top:12px" href={`mailto:${site.email}?subject=Visit%20request`}>Request a visit</a>
+    </div>
+    <div class="prose">
+      <h2 style="color:var(--ink)">It helps to know</h2>
+      <p>Your name and the best way to reach you, your pet's name, species and age, and your town. That's all we need to start.</p>
+      <p>Serving Lone Tree and the greater Denver area.</p>
+    </div>
+  </section>
+</Base>

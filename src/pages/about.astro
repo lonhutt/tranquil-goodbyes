@@ -1,0 +1,34 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../site";
+
+const values = [
+  { title: "Compassion and empathy", text: "For your pet and for the people who love them." },
+  { title: "Clinical excellence", text: "Exceptional veterinary care, even at the end of life." },
+  { title: "Respect for the human-animal bond", text: "The relationship you share guides everything we do." },
+  { title: "Honest communication", text: "Clear, kind answers, with no surprises." },
+  { title: "Individualized care", text: "Every pet and every family is different." },
+  { title: "Professional integrity", text: "Independent, accountable, and always acting in your pet's best interest." },
+];
+---
+
+<Base title="About Dr. Kubik" description="Meet Dr. Rachael Kubik, the veterinarian behind Tranquil Goodbyes.">
+  <section class="split" style="margin-top:56px">
+    <div class="portrait" role="img" aria-label="Photo of Dr. Rachael Kubik (placeholder)">PHOTO OF DR. KUBIK</div>
+    <div class="prose">
+      <div class="eyebrow">Your veterinarian</div>
+      <h1 style="font-size:clamp(36px,5vw,56px);color:var(--ink);margin-bottom:20px">Dr. Rachael Kubik</h1>
+      <p>{site.name} is an independent, veterinarian-owned practice serving Lone Tree and the greater Denver area.</p>
+      <p>Our mission is to provide compassionate, dignified, and personalized end-of-life care that allows pets to pass peacefully at home, surrounded by the people who love them.</p>
+      <p>Our vision is to be a trusted provider of in-home pet euthanasia throughout the Denver metro area.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">What we believe</div>
+    <h2>Our values</h2>
+    <div class="grid">
+      {values.map((v) => <div class="card"><h3>{v.title}</h3><p>{v.text}</p></div>)}
+    </div>
+  </section>
+</Base>

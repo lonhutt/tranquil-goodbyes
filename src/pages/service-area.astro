@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+
+// Placeholder list; Rachael to confirm the real service area.
+const towns = ["Lone Tree", "Highlands Ranch", "Littleton", "Centennial", "Parker", "Castle Rock", "Greenwood Village", "Englewood", "Aurora", "Denver"];
+---
+
+<Base title="Service area" description="Tranquil Goodbyes visits homes in Lone Tree and across the Denver metro area.">
+  <div class="page-head">
+    <div class="eyebrow">Service area</div>
+    <h1>We come to you.</h1>
+    <p>Based in Lone Tree, serving families across the Denver metro area.</p>
+  </div>
+  <section>
+    <ul class="towns">{towns.map((t) => <li>{t}</li>)}</ul>
+    <p class="muted" style="margin-top:24px">Don't see your town? Get in touch and we'll let you know whether we can visit.</p>
+  </section>
+  <section class="cta">
+    <h2>Not sure if we serve your area?</h2>
+    <p>Just ask. We'll tell you honestly.</p>
+    <a class="btn light" href="/contact">Contact us</a>
+  </section>
+</Base>

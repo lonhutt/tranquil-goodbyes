@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../site";
+
+const steps = [
+  { title: "Reach out", text: "Call or message us. We'll answer your questions and find a time that works for your family." },
+  { title: "We come to you", text: "Dr. Kubik visits your home, takes time to talk, and lets your pet settle in their favorite spot." },
+  { title: "A calm goodbye", text: "A quiet, peaceful process, with you beside your pet the whole time. No rush, ever." },
+];
+const values = ["Compassion", "Clinical excellence", "Honest communication", "Individualized care", "Professional integrity"];
+---
+
+<Base>
+  <header class="hero">
+    <h1>A peaceful goodbye. At home.</h1>
+    <p>Compassionate in-home euthanasia for dogs and cats across the Denver metro, where your pet feels safest.</p>
+    <div class="btns">
+      <a class="btn" href="/contact">Request a visit</a>
+      <a class="btn ghost" href="/how-it-works">How it works</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="eyebrow">How it works</div>
+    <h2>Gentle, unhurried, and on your terms.</h2>
+    <div class="grid">
+      {steps.map((s, i) => (
+        <div class="card"><div class="n">{i + 1}</div><h3>{s.title}</h3><p>{s.text}</p></div>
+      ))}
+    </div>
+  </section>
+
+  <section class="split">
+    <div class="portrait" role="img" aria-label="Photo of Dr. Rachael Kubik (placeholder)">PHOTO OF DR. KUBIK</div>
+    <div>
+      <div class="eyebrow">Your veterinarian</div>
+      <h2>Dr. Rachael Kubik</h2>
+      <p class="muted">{site.name} is an independent, veterinarian-owned practice serving Lone Tree and the greater Denver area. Exceptional care, delivered with compassion, in the place pets feel safest.</p>
+      <ul class="chips">{values.map((v) => <li>{v}</li>)}</ul>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>When you're ready, we're here.</h2>
+    <p>Serving Lone Tree, Highlands Ranch, Centennial, Littleton, and beyond.</p>
+    <a class="btn light" href="/contact">Request a visit</a>
+  </section>
+</Base>

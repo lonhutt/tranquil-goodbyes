@@ -1,0 +1,32 @@
+---
+import Base from "../layouts/Base.astro";
+
+// Placeholder process copy; Rachael to confirm the real steps.
+const steps = [
+  { title: "Reach out", text: "Call or message us whenever you're ready, even if you're only starting to think about it. We'll answer your questions and, if you'd like, schedule a visit." },
+  { title: "We come to you", text: "Dr. Kubik arrives at your home and takes time to meet you and your pet, talk through what to expect, and answer anything on your mind." },
+  { title: "Your pet settles in", text: "Your pet stays in their favorite spot, on their own bed or in your arms. There's no car ride, no clinic and no waiting room." },
+  { title: "A calm goodbye", text: "Dr. Kubik guides the process gently and explains each step. You can be beside your pet the whole time, and there is no rush." },
+  { title: "Afterward", text: "We'll talk through your options for aftercare and make sure you have the support you need." },
+];
+---
+
+<Base title="How it works" description="What to expect from an in-home pet euthanasia visit with Tranquil Goodbyes.">
+  <div class="page-head">
+    <div class="eyebrow">How it works</div>
+    <h1>Gentle, unhurried, and on your terms.</h1>
+    <p>Every goodbye is different. Here's the gentle shape of ours.</p>
+  </div>
+  <section>
+    <div class="grid">
+      {steps.map((s, i) => (
+        <div class="card"><div class="n">{i + 1}</div><h3>{s.title}</h3><p>{s.text}</p></div>
+      ))}
+    </div>
+  </section>
+  <section class="cta">
+    <h2>Have questions first?</h2>
+    <p>We're happy to talk anything through, with no pressure.</p>
+    <a class="btn light" href="/contact">Get in touch</a>
+  </section>
+</Base>

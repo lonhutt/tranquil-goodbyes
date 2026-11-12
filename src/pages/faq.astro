@@ -1,0 +1,29 @@
+---
+import Base from "../layouts/Base.astro";
+
+// Draft answers kept deliberately general; Rachael to review and fill in specifics (fees, aftercare, hours).
+const faqs = [
+  { q: "How do I know when it's time?", a: "It's one of the hardest questions there is. We're glad to talk it through with you, including quality-of-life considerations, so you can feel confident in your decision." },
+  { q: "Which pets do you care for?", a: "We provide in-home euthanasia for dogs and cats in the Denver metro area." },
+  { q: "Can my family be there?", a: "Yes. Family members are welcome to be present, and you can decide who is in the room and how you'd like the visit to go." },
+  { q: "How long does a visit take?", a: "We don't rush. Dr. Kubik will take the time you need to talk, to say goodbye, and to ask questions." },
+  { q: "What happens afterward?", a: "We'll discuss your aftercare options with you and help you choose what feels right." },
+  { q: "How much does it cost?", a: "Fees depend on your location and the options you choose. Contact us and we'll be upfront about costs before you decide anything." },
+  { q: "How do I request a visit?", a: "Call or email us. We'll talk through your situation and find a time that works." },
+];
+---
+
+<Base title="FAQ" description="Common questions about in-home pet euthanasia with Tranquil Goodbyes.">
+  <div class="page-head">
+    <div class="eyebrow">FAQ</div>
+    <h1>Questions, answered kindly.</h1>
+  </div>
+  <section style="max-width:760px">
+    {faqs.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+  </section>
+  <section class="cta">
+    <h2>Still wondering about something?</h2>
+    <p>We're happy to talk it through.</p>
+    <a class="btn light" href="/contact">Get in touch</a>
+  </section>
+</Base>
