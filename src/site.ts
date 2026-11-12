@@ -11,3 +11,6 @@ export const site = {
     { href: "/faq", label: "FAQ" },
   ],
 };
+
+// Prefixes internal links with the deploy base path (e.g. /repo-name on GitHub Pages).
+export const url = (path: string) => import.meta.env.BASE_URL.replace(/\/$/, "") + path;

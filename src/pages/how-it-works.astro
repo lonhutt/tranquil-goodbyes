@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import { url } from "../site";
 
 // Placeholder process copy; Rachael to confirm the real steps.
 const steps = [
@@ -27,6 +28,6 @@ const steps = [
   <section class="cta">
     <h2>Have questions first?</h2>
     <p>We're happy to talk anything through, with no pressure.</p>
-    <a class="btn light" href="/contact">Get in touch</a>
+    <a class="btn light" href={url("/contact")}>Get in touch</a>
   </section>
 </Base>

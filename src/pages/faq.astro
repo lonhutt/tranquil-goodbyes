@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import { url } from "../site";
 
 // Draft answers kept deliberately general; Rachael to review and fill in specifics (fees, aftercare, hours).
 const faqs = [
@@ -24,6 +25,6 @@ const faqs = [
   <section class="cta">
     <h2>Still wondering about something?</h2>
     <p>We're happy to talk it through.</p>
-    <a class="btn light" href="/contact">Get in touch</a>
+    <a class="btn light" href={url("/contact")}>Get in touch</a>
   </section>
 </Base>

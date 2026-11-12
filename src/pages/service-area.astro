@@ -1,5 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
+import { url } from "../site";
 
 // Placeholder list; Rachael to confirm the real service area.
 const towns = ["Lone Tree", "Highlands Ranch", "Littleton", "Centennial", "Parker", "Castle Rock", "Greenwood Village", "Englewood", "Aurora", "Denver"];
@@ -18,6 +19,6 @@ const towns = ["Lone Tree", "Highlands Ranch", "Littleton", "Centennial", "Parke
   <section class="cta">
     <h2>Not sure if we serve your area?</h2>
     <p>Just ask. We'll tell you honestly.</p>
-    <a class="btn light" href="/contact">Contact us</a>
+    <a class="btn light" href={url("/contact")}>Contact us</a>
   </section>
 </Base>

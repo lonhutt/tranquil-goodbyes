@@ -1,6 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import { site } from "../site";
+import { site, url } from "../site";
 
 const steps = [
   { title: "Reach out", text: "Call or message us. We'll answer your questions and find a time that works for your family." },
@@ -15,8 +15,8 @@ const values = ["Compassion", "Clinical excellence", "Honest communication", "In
     <h1>A peaceful goodbye. At home.</h1>
     <p>Compassionate in-home euthanasia for dogs and cats across the Denver metro, where your pet feels safest.</p>
     <div class="btns">
-      <a class="btn" href="/contact">Request a visit</a>
-      <a class="btn ghost" href="/how-it-works">How it works</a>
+      <a class="btn" href={url("/contact")}>Request a visit</a>
+      <a class="btn ghost" href={url("/how-it-works")}>How it works</a>
     </div>
   </header>
 
@@ -43,6 +43,6 @@ const values = ["Compassion", "Clinical excellence", "Honest communication", "In
   <section class="cta">
     <h2>When you're ready, we're here.</h2>
     <p>Serving Lone Tree, Highlands Ranch, Centennial, Littleton, and beyond.</p>
-    <a class="btn light" href="/contact">Request a visit</a>
+    <a class="btn light" href={url("/contact")}>Request a visit</a>
   </section>
 </Base>
