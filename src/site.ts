@@ -1,9 +1,8 @@
-// Placeholder contact details; replace with Rachael's real ones before launch.
 export const site = {
   name: "Tranquil Goodbyes",
-  phone: "(303) 555-0100",
-  phoneHref: "tel:+13035550100",
-  email: "hello@example.com",
+  phone: "(720) 593-8636",
+  phoneHref: "tel:+17205938636",
+  email: "kubikrachael@gmail.com",
   nav: [
     { href: "/how-it-works", label: "How it works" },
     { href: "/about", label: "About" },
