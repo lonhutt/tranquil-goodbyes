@@ -3,46 +3,91 @@ import Base from "../layouts/Base.astro";
 import { site, url } from "../site";
 
 const steps = [
-  { title: "Reach out", text: "Call or message us. We'll answer your questions and find a time that works for your family." },
-  { title: "We come to you", text: "Dr. Kubik visits your home, takes time to talk, and lets your pet settle in their favorite spot." },
-  { title: "A calm goodbye", text: "A quiet, peaceful process, with you beside your pet the whole time. No rush, ever." },
+    {
+        title: "Reach out",
+        text: "Text or call us. We'll answer your questions and find a time that works for your family.",
+    },
+    {
+        title: "We come to you",
+        text: "Dr. Kubik visits your home, takes time to talk, and lets your pet settle in their favorite spot.",
+    },
+    {
+        title: "A calm goodbye",
+        text: "A quiet, peaceful process, with you beside your pet the whole time. No rush, ever.",
+    },
 ];
-const values = ["Compassion", "Clinical excellence", "Honest communication", "Individualized care", "Professional integrity"];
+const values = [
+    "Compassion",
+    "Empathy",
+    "Honest communication",
+    "Individualized care",
+    "Professional integrity",
+];
 ---
 
 <Base>
-  <header class="hero">
-    <h1>A peaceful goodbye. At home.</h1>
-    <p>Compassionate in-home euthanasia for dogs and cats across the Denver metro, where your pet feels safest.</p>
-    <div class="btns">
-      <a class="btn" href={url("/contact")}>Request a visit</a>
-      <a class="btn ghost" href={url("/how-it-works")}>How it works</a>
-    </div>
-  </header>
+    <header class="hero">
+        <h1>A peaceful goodbye. At home.</h1>
+        <p>
+            Compassionate in-home euthanasia for dogs and cats across the Denver
+            metro, in the comfort of your own home.
+        </p>
+        <div class="btns">
+            <a class="btn" href={url("/contact")}>
+                Request a visit
+            </a>
+            <a class="btn ghost" href={url("/how-it-works")}>
+                How it works
+            </a>
+        </div>
+    </header>
 
-  <section>
-    <div class="eyebrow">How it works</div>
-    <h2>Gentle, unhurried, and on your terms.</h2>
-    <div class="grid">
-      {steps.map((s, i) => (
-        <div class="card"><div class="n">{i + 1}</div><h3>{s.title}</h3><p>{s.text}</p></div>
-      ))}
-    </div>
-  </section>
+    <section>
+        <div class="eyebrow">How it works</div>
+        <h2>Gentle, unhurried, and on your terms.</h2>
+        <div class="grid">
+            {steps.map((s, i) => (
+                <div class="card">
+                    <div class="n">{i + 1}</div>
+                    <h3>{s.title}</h3>
+                    <p>{s.text}</p>
+                </div>
+            ))}
+        </div>
+    </section>
 
-  <section class="split">
-    <img class="portrait" src={url("/dr-kubik.jpeg")} alt="Dr. Rachael Kubik smiling and holding a small Pomeranian" width="572" height="600" />
-    <div>
-      <div class="eyebrow">Your veterinarian</div>
-      <h2>Dr. Rachael Kubik</h2>
-      <p class="muted">{site.name} is an independent, veterinarian-owned practice serving Lone Tree and the greater Denver area. Exceptional care, delivered with compassion, in the place pets feel safest.</p>
-      <ul class="chips">{values.map((v) => <li>{v}</li>)}</ul>
-    </div>
-  </section>
+    <section class="split">
+        <img
+            class="portrait"
+            src={url("/dr-kubik.jpeg")}
+            alt="Dr. Rachael Kubik smiling and holding a small Pomeranian"
+            width="572"
+            height="600"
+        />
+        <div>
+            <div class="eyebrow">Your veterinarian</div>
+            <h2>Dr. Rachael Kubik</h2>
+            <p class="muted">
+                {site.name} is an independent, veterinarian-owned practice
+                serving Lone Tree and the greater Denver area. Exceptional care,
+                delivered with compassion, in the place pets feel safest.
+            </p>
+            <ul class="chips">
+                {values.map((v) => (
+                    <li>{v}</li>
+                ))}
+            </ul>
+        </div>
+    </section>
 
-  <section class="cta">
-    <h2>When you're ready, we're here.</h2>
-    <p>Serving Lone Tree, Highlands Ranch, Centennial, Littleton, and beyond.</p>
-    <a class="btn light" href={url("/contact")}>Request a visit</a>
-  </section>
+    <section class="cta">
+        <h2>When you're ready, we're here.</h2>
+        <p>
+            Serving Lone Tree, Castle Rock, Highlands Ranch, Centennial,
+            Littleton, and beyond.
+        </p>
+        <a class="btn light" href={url("/contact")}>
+            Request a visit
+        </a>
+    </section>
 </Base>

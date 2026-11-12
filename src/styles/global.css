@@ -38,7 +38,7 @@ section { margin-bottom: 96px; }
   background: radial-gradient(circle at 80% 20%, #bfe1e4 0, transparent 55%), radial-gradient(circle at 10% 90%, #d9efe8 0, transparent 50%), var(--mist); }
 .hero h1 { max-width: 12ch; }
 .hero p { max-width: 46ch; margin: 24px 0 36px; color: var(--muted); font-size: 19px; }
-.hero .btns { display: flex; gap: 14px; flex-wrap: wrap; }
+.btns { display: flex; gap: 14px; flex-wrap: wrap; }
 .hero::after { content: ""; position: absolute; right: -80px; bottom: -120px; width: 420px; height: 420px; border-radius: 50%; background: radial-gradient(circle, #fff8 0, #fff0 70%); border: 1px solid #fff9; pointer-events: none; }
 
 .page-head { padding: 56px 0 48px; max-width: 760px; }
@@ -55,6 +55,9 @@ section { margin-bottom: 96px; }
 .chips li { background: var(--mist); padding: 8px 18px; border-radius: 999px; font-size: 15px; color: var(--deep); }
 .prose p + p { margin-top: 16px; }
 .prose { color: var(--muted); }
+.prose ul { padding-left: 1.25em; margin-top: 16px; }
+.prose li + li { margin-top: 6px; }
+.prose ul + p { margin-top: 16px; }
 
 .cta { background: var(--deep); color: #fff; border-radius: 36px; padding: 72px 48px; text-align: center; }
 .cta p { opacity: 0.85; margin: 10px 0 28px; }
