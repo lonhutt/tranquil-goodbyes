@@ -3,7 +3,7 @@ export const site = {
   phone: "(720) 593-8636",
   phoneHref: "tel:+17205938636",
   smsHref: "sms:+17205938636",
-  email: "kubikrachael@gmail.com",
+  email: "rachael@tranquil-goodbyes.com",
   nav: [
     { href: "/how-it-works", label: "How it works" },
     { href: "/about", label: "About" },
