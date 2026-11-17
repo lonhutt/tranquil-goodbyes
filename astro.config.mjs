@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
-// SITE and BASE are set by the GitHub Pages workflow; local dev uses the defaults.
+// Optional SITE/BASE overrides; Cloudflare serves from the root, so the defaults apply.
 export default defineConfig({
   site: process.env.SITE,
   base: process.env.BASE ?? "/",
