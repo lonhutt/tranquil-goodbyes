@@ -55,4 +55,4 @@ HSTS is off for now. Turn it on (same Edge Certificates page) once the site has 
 
 ## Search engines
 
-Every page currently sets `noindex, nofollow` in `Base.astro`; the site isn't meant to show up in search yet. Remove that meta tag when it's ready to go public.
+The site is open to search engines. The `robots.txt` served at the domain comes from Cloudflare, not this repo; it only carries content-signal comments and doesn't block any crawlers.
