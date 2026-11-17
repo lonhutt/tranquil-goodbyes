@@ -38,6 +38,21 @@ Worker config lives in `wrangler.jsonc`. To check a deploy without pushing anyth
 npm run build && npx wrangler deploy --dry-run
 ```
 
+The workflow pins Wrangler 4; the action's default (3.x) can't deploy an assets-only Worker with no `main`.
+
+## Domains
+
+`tranquil-goodbyes.com` is registered through Cloudflare, so DNS is already on Cloudflare's nameservers. Both `tranquil-goodbyes.com` and `www.tranquil-goodbyes.com` are attached to the Worker as custom domains in the `routes` block of `wrangler.jsonc`; deploying creates the DNS records and certificates.
+
+The rest lives in the Cloudflare dashboard, not this repo:
+
+- **Always Use HTTPS** (SSL/TLS → Edge Certificates) sends any `http://` request to `https://` with a 301
+- A **redirect rule** (Rules → Redirect Rules, "Redirect from WWW to root") sends `www` to the bare domain with a 301, keeping the path and query string
+
+Keep `www` in `wrangler.jsonc` even though it never reaches the Worker; that entry is what creates the `www` DNS record, and without it the redirect has nothing to run on.
+
+HSTS is off for now. Turn it on (same Edge Certificates page) once the site has been stable on HTTPS for a while; it's hard to back out of once browsers have seen it.
+
 ## Search engines
 
 Every page currently sets `noindex, nofollow` in `Base.astro`; the site isn't meant to show up in search yet. Remove that meta tag when it's ready to go public.
