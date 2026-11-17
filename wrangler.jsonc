@@ -1,6 +1,10 @@
 {
   "name": "tranquil-goodbyes",
   "compatibility_date": "2026-11-01",
+  "routes": [
+    { "pattern": "tranquil-goodbyes.com", "custom_domain": true },
+    { "pattern": "www.tranquil-goodbyes.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./dist"
   }
